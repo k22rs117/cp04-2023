@@ -203,9 +203,18 @@
     function btnCClick(e){
         alarm();
         active = false;
-        period = 60*parseInt($("#minute").val()) + parseInt($("#second").val());
+        piriod = 60 * parseInt($("#minute").val()) - parseInt($("#second").val());
         $("#time").html("経過時間：0");
-        $("#remain").html("残り時間：" + period);
+        $("#remain").html("残り時間：" + piriod);
+        
+        
+    }
+
+    function btnDClick(e){
+        alarm();
+        active = false;
+        $("#time").html("経過時間：0");
+        $("#remain").html("残り時間：0");
         
         
     }
@@ -215,7 +224,11 @@
     function timer(){  
       if(active){
         var time = parseInt((new Date() - startTime)/1000);
-        var rest = period - time;
+        var rest = piriod - time;
+        if(restsec = 0){
+
+        }
+
         $("#time").html("経過時間：" + time);
         $("#remain").html("残り時間：" + rest);
         analog(rest);
@@ -242,7 +255,7 @@
     <button id="btnA">Start</button>  
     <button id="btnB">Stop</button>  
     <button id="btnC">Set</button> 
-    <button id="btnD">Set1min</button> 
+    <button id="btnD">Reset</button> 
     <input type="number" id="minute" value=0 >
     <input type="number" id="second" value=15 >
 </body>

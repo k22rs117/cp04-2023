@@ -1,6 +1,7 @@
 /**/
+
     body{
-        background: skyblue;
+        background-color: lightblue;
     }
 
     button{
@@ -56,34 +57,40 @@
     
     #btnA {
         font-size: 20px;
-        color: green;
+        color: blueviolet;
         background: yellow;
         position:absolute; top:380px; left:2%; width:48%; height:60px; 
     }
     
     #btnB {
         font-size: 20px;
+        color: green;
+        background: red;
         position:absolute; top:380px; left:50%; width:48%; height:60px; 
     }
 
     #btnC {
-        font-size: 10px;
+        font-size: 20px;
+        color: orangered;
+        background: skyblue;
         position:absolute; top:440px; left:2%; width:48%; height:60px; 
     }
 
     #btnD {
-        font-size: 10px;
+        font-size: 20px;
+        color: purple;
+        background: greenyellow;
         position:absolute; top:440px; left:50%; width:48%; height:60px; 
     }
     
     #minute {
         font-size: 30px;
-        position:absolute; top:500px; left:60px; width:80px; height:40px;
+        position:absolute; top:530px; left:60px; width:80px; height:40px;
     }
     
     #second {
         font-size: 30px;
-        position:absolute; top:500px; left:190px; width:80px; height:40px;   
+        position:absolute; top:530px; left:190px; width:80px; height:40px;   
     }
     
     input[type=number] {text-align: right;}
