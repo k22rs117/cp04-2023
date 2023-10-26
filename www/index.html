@@ -203,9 +203,9 @@
     function btnCClick(e){
         alarm();
         active = false;
-        piriod = 60 * parseInt($("#minute").val()) - parseInt($("#second").val());
+        period = 60*parseInt($("#minute").val()) + parseInt($("#second").val());
         $("#time").html("経過時間：0");
-        $("#remain").html("残り時間：" + piriod);
+        $("#remain").html("残り時間：" + Math.floor(period / 60) + "分" + period % 60 + "秒");
         
         
     }
@@ -224,13 +224,10 @@
     function timer(){  
       if(active){
         var time = parseInt((new Date() - startTime)/1000);
-        var rest = piriod - time;
-        if(restsec = 0){
+        var rest = period - time;
 
-        }
-
-        $("#time").html("経過時間：" + time);
-        $("#remain").html("残り時間：" + rest);
+        $("#time").html("経過時間：" + Math.floor(time / 60) + "分" + time % 60 + "秒");
+        $("#remain").html("残り時間：" + Math.floor(rest / 60) + "分" + rest % 60 + "秒");
         analog(rest);
       }
       if(rest <= 0){
